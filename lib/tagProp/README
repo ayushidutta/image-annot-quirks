@@ -1,0 +1,37 @@
+****************************************
+*******  Matlab code for TagProp *******
+****************************************
+Current version: 0.2
+
+To compile, run "mex tagpropCmt.c" or run test_tagprop() which will try to compile and learn tagprop on the provided data set.
+
+Libpthread is required for multi-threading, so only linux is officially supported.
+
+If you use this code for a publication, please cite the following paper:
+
+@InProceedings{GMVS09,
+  author       = "Matthieu Guillaumin and Thomas Mensink and Jakob Verbeek and Cordelia Schmid",
+  title        = "TagProp: Discriminative metric learning in nearest neighbor models for image auto-annotation",
+  booktitle    = "International Conference on Computer Vision",
+  pages        = "309--316",
+  month        = "sep",
+  year         = "2009",
+  keywords     = "LEAR, LJK, CLASS, R2I",
+  url          = "http://lear.inrialpes.fr/pubs/2009/GMVS09"
+}
+
+****************************************
+****************  Usage ****************
+****************************************
+
+Please refer to tagprop_learn and tagprop_predict, the two main functions of the package.
+
+****************************************
+************** Copyrights **************
+****************************************
+minimize.m:
+Copyright (C) 2001 - 2006 by Carl Edward Rasmussen (2006-09-08).
+
+other code:
+Copyright (C) by Jakob Verbeek and Matthieu Guillaumin, INRIA
+
