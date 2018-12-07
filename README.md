@@ -1,3 +1,5 @@
+This section is being updated. Please wait till end of Dec 2018.
+
 # Automatic Image Annotation
 
 This repository contains the code for the paper:
