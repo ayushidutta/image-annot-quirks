@@ -16,7 +16,7 @@ To save large feature data, you may save features across multiple feature files.
  Initialize the 2PKNN class.
 
 Specify the following arguments fir rTPKNN_v2:
-- 
+- kk
 
  ```matlab
 t = rTPKNN_v2('../data/nuswide','net-res1-101','tpknn','iapr_train_r101.mat','iapr_test_r101.mat','iapr_train_annot.txt','iapr_test_annot.txt','iapr_train_r101_model.mat','iapr_test_r101_pred.mat');
