@@ -1,8 +1,6 @@
-This section is being updated. Please wait till end of Dec 2018.
+# Automatic Image Annotation: the quirks and what works
 
-# Automatic Image Annotation
-
-This repository contains the code for the paper:
+This repository contains the code for our paper published in Multimedia Tools and Applications: https://doi.org/10.1007/s11042-018-6247-3
 
 
 # Run
