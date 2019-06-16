@@ -1,14 +1,20 @@
-# Automatic Image Annotation
+# Prepare the dataset
 
-This repository contains the code for the paper:
+To run different annotation models, you need to first extract the features and save them in a mat file. 
 
+### Feature File
+The matfile containing the features has 2 fields: 
+_ftr_ : The features matrix (No. of features X Ftr dimension)
+_n_ftrs_ : The no. of features. This corresponds to the no. of training and testing images for train and test features respectively.
 
-# Run
+To save large feature data, you may split across multiple feature files.
 
-Refer to run.md for details as to how to use the code.
+## Run different annotation models (2PKNN, SVM, Tagprop, Tagrel, JEC)
 
-# Datasets
-
-The 'datasets' folder contains the train/test splits of all datasets used in this experiment. For images, please refer to the individual dataset's page. 
-
-# Files and Directories
+# Run 2PKNN
+ 
+```matlab
+t = rTPKNN_v2('../data/nuswide','net-res1-101','tpknn','iapr_train_r101.mat','iapr_test_r101.mat','iapr_train_annot.txt','iapr_test_annot.txt','iapr_train_r101_model.mat','iapr_test_r101_pred.mat');
+t.predict(-1,-1,4,1,3000,5000);
+t.evalPerformance(3,1);
+```
