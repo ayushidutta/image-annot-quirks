@@ -69,4 +69,20 @@ t.evalPerformance(3,1);
 ```
 ### Run Tagprop
 
+Follow the original paper on 'Tagprop' for installation of the library. The code has been referred here in the 'lib/tagProp' folder.
 
+To run the training and testing follow the following steps. Check the arguments as explained above for 2PKNN. 
+
+```matlab
+t = rTAGPROP_v2(_dData_, _dFtr_, _dModel_, _fTrainFtr_, _fTestFtr_, _fTrainAnnot_, _fTestAnnot_, _fModel_, _fResults_);
+t.train(_K_, _batch1_, _batch2_);
+t.predict(_test_split_idx_, _test_split_sz_, _K_, _batch1_, _batch2_);
+t.evalPerformance(_topK_, _n_tsFiles_);
+```
+where _K_ is a hyperparameter for Tagprop.
+
+### Run Tagrel
+
+### Run SVM
+
+### Run JEC
