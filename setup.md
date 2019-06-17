@@ -25,8 +25,8 @@ where,
 - _fFtr2_ : Training features file (.mat)
 - _fModel_ : Model file where the results will be saved (.mat)
 - _fNN_ : File where the nearest neghbour indices will be saved (.mat)
-- _batch1_ : Integer specifying the no. of test samples in memory at a time. This is decided based on feature dimension, and affects only the speed of the code.
-- _batch2_ : Integer specifying the no. of train samples in memory at a time. This is decided based on feature dimension, and affects only the speed of the code.
+- _batch1_ : Integer specifying the no. of test samples in memory at a time, ideally 5000. This is decided based on feature dimension, and affects only the speed of the code.
+- _batch2_ : Integer specifying the no. of train samples in memory at a time, ideally 5000. This is decided based on feature dimension, and affects only the speed of the code.
 
 ## Run different annotation models (2PKNN, SVM, Tagprop, Tagrel, JEC)
 
