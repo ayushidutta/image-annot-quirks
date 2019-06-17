@@ -2,6 +2,10 @@
 
 Setup involves the following steps. 
 
+### Code Path
+
+Make sure that this 'image-annot-quirks' folder and its subfolders containing all code, are added to the MATLAB path in order to execute each function in MATLAB. 
+
 ### Prepare the Feature Files 
 To run different annotation models, you need to first extract the features and save them in a mat file. The matfile containing the features has 2 fields: 
 - _ftr_ : The features matrix (No. of features X Feature dimension)
