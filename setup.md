@@ -104,3 +104,11 @@ t.evalPerformance(topK, n_tsFiles);
 ```
 
 ### Run SVM
+
+Install the 'VLFEAT' library for SVM. Run the following code for training and testing. 
+
+```matlab
+rSVM.train(fTrainFtr,fTrainAnnot,fModel,C,B0);
+rSVM.predict(fTestFtr,fModel,fScores);
+```
+where, _C_, _B0_ are the SVM hyperparameters and rest follow the arguments as mentioned for 2PKNN above.
