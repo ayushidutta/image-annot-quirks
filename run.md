@@ -7,7 +7,7 @@ To run different annotation models, you need to first extract the features and s
 - _ftr_ : The features matrix (No. of features X Feature dimension)
 - _n_ftrs_ : The no. of features. This corresponds to the no. of training and testing images for train and test features respectively.
 
-To save large feature data, you may save the features across multiple feature files with file names indexed by \_1, \_2, and so on.
+To save large feature data, you may save the features across multiple feature files with file names indexed by \_1, \_2, and so on. If _N_ is the the total no. of features split across _n_ files, each file has _N_/_n_ no. features except the last file which can have the remaining features.
 
 # Run different annotation models (2PKNN, SVM, Tagprop, Tagrel, JEC)
 
@@ -30,8 +30,8 @@ t = rTPKNN_v2('data/nuswide','net-res1-101','tpknn','nus1_train_r101.mat','nus1_
 
 Predict using 2PKNN. This saves the 2PKNN scores in _fResults_ file. 
 Args:
-- _test_split_idx_ : In case of multiple test feature files, specify the file index 1,2 and so on, else default to -1
-- _test_split_sz_ : In case of multiple test feature files, if _N_ is the the total no. of features split across _n_ files, specify _N_/_n_ as no. features in each file except the last file which can have the remaining features.  Default to -1 in case of only 1 feature file.
+- _test_split_idx_ : In case of multiple test feature files, specify the file index 1, 2 and so on, else default to -1
+- _test_split_sz_ : In case of multiple test feature files, no. of features in each file else default to -1.
 - K : The hyperparameter _K_
 - w : The hyperparameter _w_
 - batch1 : Integer specifying the no. of test samples in memory at a time. This is decided based on feature dimension, and affects only the speed of the code.
