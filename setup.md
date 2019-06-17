@@ -83,14 +83,23 @@ where _K_ is a hyperparameter for Tagprop.
 
 ### Run Tagrel
 
-Similar to 2PKNN above, run the following:
+Similar to 2PKNN arguments above, run the following:
 
+```matlab
 t = rTAGREL_v2(_dData_, _dFtr_, _dModel_, _fTrainFtr_, _fTestFtr_, _fTrainAnnot_, _fTestAnnot_, _fModel_, _fResults_);
 t.predict(_test_split_idx_, _test_split_sz_, _K_, _batch1_, _batch2_);
 t.evalPerformance(_K_, _topK_, _n_tsFiles_);
+```
 
 where _K_ is a hyperparameter for Tagrel.
 
 ### Run JEC
+
+Similar to 2PKNN arguments above, run the following:
+
+```matlab
+t = rJEC_v2(_dData_, _dFtr_, _dModel_, _fTrainFtr_, _fTestFtr_, _fTrainAnnot_, _fTestAnnot_, _fModel_, _fResults_);
+t.predict(_test_split_idx_, _test_split_sz_, _topK_, _batch1_, _batch2_);
+t.evalPerformance(_topK_, _n_tsFiles_);
 
 ### Run SVM
