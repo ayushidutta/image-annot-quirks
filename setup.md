@@ -67,6 +67,7 @@ Args:
 ```matlab
 t.evalPerformance(3,1);
 ```
+
 ### Run Tagprop
 
 Follow the original paper on 'Tagprop' for installation of the library. The code has been referred here in the 'lib/tagProp' folder.
@@ -74,10 +75,10 @@ Follow the original paper on 'Tagprop' for installation of the library. The code
 To run the training and testing follow the following steps. Check the arguments as explained above for 2PKNN. 
 
 ```matlab
-t = rTAGPROP_v2(_dData_, _dFtr_, _dModel_, _fTrainFtr_, _fTestFtr_, _fTrainAnnot_, _fTestAnnot_, _fModel_, _fResults_);
-t.train(_K_, _batch1_, _batch2_);
-t.predict(_test_split_idx_, _test_split_sz_, _K_, _batch1_, _batch2_);
-t.evalPerformance(_topK_, _n_tsFiles_);
+t = rTAGPROP_v2(dData, dFtr, dModel, fTrainFtr, fTestFtr, fTrainAnnot, fTestAnnot, fModel, fResults);
+t.train(K, batch1, batch2);
+t.predict(test_split_idx, test_split_sz, K, batch1, batch2);
+t.evalPerformance(topK, n_tsFiles);
 ```
 where _K_ is a hyperparameter for Tagprop.
 
@@ -86,11 +87,10 @@ where _K_ is a hyperparameter for Tagprop.
 Similar to 2PKNN arguments above, run the following:
 
 ```matlab
-t = rTAGREL_v2(_dData_, _dFtr_, _dModel_, _fTrainFtr_, _fTestFtr_, _fTrainAnnot_, _fTestAnnot_, _fModel_, _fResults_);
-t.predict(_test_split_idx_, _test_split_sz_, _K_, _batch1_, _batch2_);
-t.evalPerformance(_K_, _topK_, _n_tsFiles_);
+t = rTAGREL_v2(dData, dFtr, dModel, fTrainFtr, fTestFtr, fTrainAnnot, fTestAnnot, fModel, fResults);
+t.predict(test_split_idx, test_split_sz, K, batch1, batch2);
+t.evalPerformance(K, topK, n_tsFiles);
 ```
-
 where _K_ is a hyperparameter for Tagrel.
 
 ### Run JEC
@@ -98,8 +98,9 @@ where _K_ is a hyperparameter for Tagrel.
 Similar to 2PKNN arguments above, run the following:
 
 ```matlab
-t = rJEC_v2(_dData_, _dFtr_, _dModel_, _fTrainFtr_, _fTestFtr_, _fTrainAnnot_, _fTestAnnot_, _fModel_, _fResults_);
-t.predict(_test_split_idx_, _test_split_sz_, _topK_, _batch1_, _batch2_);
-t.evalPerformance(_topK_, _n_tsFiles_);
+t = rJEC_v2(dData, dFtr, dModel, fTrainFtr, fTestFtr, fTrainAnnot, fTestAnnot, fModel, fResults);
+t.predict(test_split_idx, test_split_sz, topK, batch1, batch2);
+t.evalPerformance(topK, n_tsFiles);
+```
 
 ### Run SVM
