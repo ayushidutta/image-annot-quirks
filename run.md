@@ -9,9 +9,24 @@ To run different annotation models, you need to first extract the features and s
 
 To save large feature data, you may save the features across multiple feature files with file names indexed by \_1, \_2, and so on. If _N_ is the the total no. of features split across _n_ files, each file has _N_/_n_ no. features except the last file which can have the remaining features.
 
-# Run different annotation models (2PKNN, SVM, Tagprop, Tagrel, JEC)
+### Set up features distance related statistics
 
-## Run 2PKNN
+Nearest neighbour models are based on the distance of the test samples from the training samples. In order to normalise the distances, we calculated the maximum possible distance prior to running our models. We also store certain other statistics such as the K nearest neighbour indices for the test samples, etc. that may needed for our analysis later. This can be done by running the following function.
+
+ ```matlab
+model_dist( fFtr1,fFtr2,fModel,fNN,batch1,batch2)
+ ```
+where,
+- _fFtr1_ : Testing features file (.mat)
+- _fFtr2_ : Training features file (.mat)
+- _fModel_ : Model file where the results will be saved (.mat)
+- _fNN_ : File where the nearest neghbour indices will be saved (.mat)
+- _batch1_ : Integer specifying the no. of test samples in memory at a time. This is decided based on feature dimension, and affects only the speed of the code.
+- _batch2_ : Integer specifying the no. of train samples in memory at a time. This is decided based on feature dimension, and affects only the speed of the code.
+
+## Run different annotation models (2PKNN, SVM, Tagprop, Tagrel, JEC)
+
+### Run 2PKNN
  
 Initialize the 2PKNN class as specified below with the following arguments:
 - _dData_ : Root data directory, where all the features, annotations, model and results directories and files are saved
@@ -21,7 +36,7 @@ Initialize the 2PKNN class as specified below with the following arguments:
 - _fTestFtr_ : Testing features file (.mat)
 - _fTrainAnnot_ : Training annotations file (Refer to 'data' folder)
 - _fTestAnnot_ : Testing annotations file (Refer to 'data' folder)
-- _fModel_ : 2PKNN model file (.mat)
+- _fModel_ : 2PKNN model file (.mat). Create this file by copying the feature model file created in the setup section.
 - _fResults_ : Results file where the 2PKNN predicted label scores will be saved (.mat)
 
  ```matlab
@@ -48,5 +63,5 @@ Args:
 ```matlab
 t.evalPerformance(3,1);
 ```
-## Run Tagprop
+### Run Tagprop
 
