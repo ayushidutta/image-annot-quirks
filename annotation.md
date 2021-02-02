@@ -1,4 +1,4 @@
-# Setup
+## Code and Data Setup
 
 Setup involves the following steps. 
 
