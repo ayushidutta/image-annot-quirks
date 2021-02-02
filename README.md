@@ -8,14 +8,14 @@ This repository contains the code for our paper published in Multimedia Tools an
   - Per Label vs Per Image Evaluation Criteria 
   - Dataset Specific Biases
   
-# Run the various non-deep learning annotation models
+# Non-deep learning annotation models
 Refer to setup.md
 
-# Run the deep learning annotation models
+# Deep learning annotation models
 
 Repo: https://github.com/ayushidutta/cnn-image-classification
 
-# Run the empirical analysis
+# Empirical analysis
 
 Refer to analysis.md
 
