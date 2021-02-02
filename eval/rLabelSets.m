@@ -1,18 +1,13 @@
-function rLabelSets_topK( dData, ... % Data Directory
+function rLabelSets( dData, ... % Data Directory
                 fTrainAnnot, ... % Train Annotations file
-                fTestAnnot, ... % Test Annotations file               
-                dScores, ... % Directory of label scores
-                fScores, ... % Label scores file
-                topK ... % No of top labels to be assigned
+                fTestAnnot ... % Test Annotations file               
                 )
 %RLABELSETS Unique and novel label sets
 
 trainAnnot = load(fullfile(dData,fTrainAnnot));
-testScores = load(fullfile(dScores,fScores));
-testScores = testScores.testScores;
-[~,n_test]=size(testScores);
 n_train=size(trainAnnot,1);
 testAnnot = load(fullfile(dData,fTestAnnot));
+n_test=size(testAnnot,1);
 
 % Unique Train label set
 [uniq_tr,~,ic] = unique(trainAnnot,'rows','stable');
@@ -34,48 +29,6 @@ for i=1:length(idx)
     gt = find(uniq_tr(idx(i),:));
     disp(num2str(gt));
 end;    
-
-%{
-predictedAnnot = MultilabelAnnotate.annotateTopK(testScores',topK);
-for categ=1:2
-
-if (categ==1)
-    disp('Predictions by Method');
-else
-    disp('Variable Predictions by Method + Ground');
-    predictedAnnot = MultilabelAnnotate.annotateAintersectB(predictedAnnot,testAnnot);
-    clear testAnnot;
-end;
-
-% Unique Test label set
-uniq_pr = unique(predictedAnnot,'rows','stable');
-cnt_pr=size(uniq_pr,1);
-uniqueness = cnt_pr/n_test*100.0;
-disp(['Unique is ' num2str(cnt_pr) '/' num2str(n_test) ' ' num2str(uniqueness) '%']);
-
-% Novel label set
-cnt_novel=0;
-for i=1:n_test 
-    if (mod(i,1000)==0)
-        disp(num2str(i));
-    end;  
-    match=false;
-    for j=1:cnt_tr
-        label_set = find(predictedAnnot(i,:)-uniq_tr(j,:));
-        if (~any(label_set))
-            match=true;
-            break;
-        end;    
-    end;
-    if(~match)
-        cnt_novel=cnt_novel+1;
-    end;    
-end;
-novelness = cnt_novel/n_test*100.0;
-disp(['Novel is ' num2str(cnt_novel) '/' num2str(n_test) ' ' num2str(novelness) '%']);
-
-end;
-%}
 
 %%{
 % Unique Test label set
