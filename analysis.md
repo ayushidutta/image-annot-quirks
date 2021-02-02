@@ -30,13 +30,15 @@ rGroundUB_topK('','coco_train_annot.txt','coco_test_annot.txt',3,1)
 
 ## Label Diversity
 
+##### [Sec 4.2.1 in paper, Table 8] Percentage “unique” and “novel” label-sets
+
 ```
 rLabelSets(dData, fTrainAnnot, fTestAnnot)
 ```
 
-##### [Sec 4.2.1 in paper, Table 8] Percentage “unique” and “novel” label-sets.
-
 ## Image Diversity
 
-##### [Sec 4.2.2 in paper, Tables 9-12] Performance over the 20% most and least overlapping test subsets of various datasets.
+##### [Sec 4.2.2 in paper, Tables 9-12] Performance over the 20% most and least overlapping test subsets of various datasets
+
+
 
