@@ -28,7 +28,7 @@ where,
 - _batch1_ : Integer specifying the no. of test samples in memory at a time, ideally 5000. This is decided based on feature dimension, and affects only the speed of the code.
 - _batch2_ : Integer specifying the no. of train samples in memory at a time, ideally 5000. This is decided based on feature dimension, and affects only the speed of the code.
 
-## Run different annotation models (2PKNN, SVM, Tagprop, Tagrel, JEC)
+## Non deep learning annotation models (2PKNN, SVM, Tagprop, Tagrel, JEC)
 
 ### Run 2PKNN
  
