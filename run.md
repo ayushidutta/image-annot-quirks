@@ -115,3 +115,14 @@ where, _C_, _B0_ are the SVM hyperparameters and rest follow the arguments as me
 
 ## KCCA Feature extraction
 
+Similar to 2PKNN arguments, train KCCA and compute the train features.
+```
+t = rKCCA_v2(dData,dModel,fTrainFtr,fTestFtr,fTrainAnnot,fModel,fTrainKcca,fTestKcca)
+t.train(batch1,batch2)
+```
+_fTrainKcca_ and _fTestKcca_ refer to filenames where KCCA train and test features will get saved. Once the training is complete, before computing the test KCCA features, set the feature distance related statistics, as shown above, calling the function _model_dist()_. With the new model file, compute test features as below.
+
+```
+t = rKCCA_v2(dData,dModel,fTrainFtr,fTestFtr,fTrainAnnot,fModel,fTrainKcca,fTestKcca)
+t.project(batch1,batch2)
+```
