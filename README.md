@@ -27,3 +27,4 @@ The 'data' folder contains the train/test splits of all datasets used in this ex
 
 - MATLAB
 - Python 2
+- Tensorflow 1.0 for Deep learning annotation models
