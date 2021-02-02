@@ -30,6 +30,10 @@ rGroundUB_topK('','coco_train_annot.txt','coco_test_annot.txt',3,1)
 
 ## Label Diversity
 
+```
+rLabelSets(dData, fTrainAnnot, fTestAnnot)
+```
+
 ##### [Sec 4.2.1 in paper, Table 8] Percentage “unique” and “novel” label-sets.
 
 ## Image Diversity
