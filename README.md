@@ -8,7 +8,7 @@ This repository contains the code for our paper published in Multimedia Tools an
   - Per Label vs Per Image Evaluation Criteria 
   - Dataset Specific Biases
   
-# Non-deep learning annotation models
+# Setup and Non-deep learning annotation models
 Refer to annotation.md
 
 # Deep learning annotation models
