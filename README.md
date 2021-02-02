@@ -9,7 +9,7 @@ This repository contains the code for our paper published in Multimedia Tools an
   - Dataset Specific Biases
   
 # Setup and Non-deep learning annotation models
-Refer to annotation.md
+Refer to run.md
 
 # Deep learning annotation models
 
