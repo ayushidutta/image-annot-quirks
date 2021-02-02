@@ -22,7 +22,7 @@ for fillKMode=1:3
 end
 
 % Random Assignments 
-%{
+%%{
 disp('Simply assigning rare / freq / random labels !!');
 for i=1:3
     predictedAnnot = zeros(size(testAnnot));
@@ -36,7 +36,7 @@ for i=1:3
     disp('Performance per image(Prec/Rec/F1/N+) :');
     disp(num2str([resI.prec resI.rec resI.f1 resI.nplus]));
 end;
-%}
+%%}
 
 end
 
