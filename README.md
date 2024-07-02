@@ -11,10 +11,6 @@ This repository contains the code for our paper published in Multimedia Tools an
 # Setup and Non-deep learning annotation models
 Refer to run.md
 
-# Deep learning annotation models
-
-Repo: https://github.com/ayushidutta/cnn-image-classification
-
 # Empirical analysis
 
 Refer to analysis.md
